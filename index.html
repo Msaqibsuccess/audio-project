@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Audio button</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: antiquewhite;
+            min-height: 100vh;
+        }
+
+        .buttons {
+            margin: 10px;
+        }
+
+        button {
+            padding: 10px;
+            border-radius: 5px;
+            border: none;
+            background-color: aquamarine;
+            font-size: 18px;
+            cursor: pointer;
+            margin: 5px;
+        }
+
+        button:hover {
+            background-color: #00ff7f;
+
+        }
+        button:active {
+            color: white;
+            background-color: black;
+        }
+    </style>
+</head>
+
+<body>
+    <audio src="applause.mp3" id="audio-applause"></audio>
+    <audio src="boo.mp3" id="audio-boo"></audio>
+    <audio src="gasp.mp3" id="audio-gasp"></audio>
+    <audio src="tada.mp3" id="audio-tada"></audio>
+    <audio src="victory.mp3" id="audio-victory"></audio>
+    <audio src="wrong.mp3" id="audio-wrong"></audio>
+
+    <div class="buttons">
+        <button id="applause">Applause</button>
+        <button id="boo">Boo</button>
+        <button id="gasp">Gasp</button>
+        <button id="tada">Tada</button>
+        <button id="victory">Victory</button>
+        <button id="wrong">Wrong</button>
+    </div>
+
+
+    <script>
+        const button1 = document.getElementById("applause");
+        const button2 = document.getElementById("boo");
+        const button3 = document.getElementById("gasp");
+        const button4 = document.getElementById("tada");
+        const button5 = document.getElementById("victory");
+        const button6 = document.getElementById("wrong");
+
+        const audio1 = document.getElementById("audio-applause");
+        const audio2 = document.getElementById("audio-boo");
+        const audio3 = document.getElementById("audio-gasp");
+        const audio4 = document.getElementById("audio-tada");
+        const audio5 = document.getElementById("audio-victory");
+        const audio6 = document.getElementById("audio-wrong");
+
+
+        button1.addEventListener('click', function () {
+            stopAudio();
+            audio1.play();
+        })
+
+        button2.addEventListener('click', function () {
+            stopAudio();
+            audio2.play();
+        })
+
+        button3.addEventListener('click', function () {
+            stopAudio();
+            audio3.play();
+        })
+
+        button4.addEventListener('click', function () {
+            stopAudio();
+            audio4.play();
+        })
+
+        button5.addEventListener('click', function () {
+            stopAudio();
+            audio5.play();
+        })
+
+        button6.addEventListener('click', function () {
+            stopAudio();
+            audio6.play();
+        })
+
+        button1.addEventListener('click', function () {
+            audio1.play();
+        })
+
+    
+        function stopAudio() {
+            audio1.pause();
+            audio1.currentTime = 0;
+            audio2.pause();
+            audio3.currentTime = 0;
+            audio3.pause();
+            audio3.currentTime = 0;
+            audio4.pause();
+            audio4.currentTime = 0;
+            audio5.pause();
+            audio5.currentTime = 0;
+            audio6.pause();
+            audio6.currentTime = 0;
+        }
+
+    </script>
+</body>
+
+</html>
